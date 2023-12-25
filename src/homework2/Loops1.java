@@ -1,4 +1,4 @@
-package HomeWork2;
+package homework2;
 
 /**
  * Вывод нечетных от 1 до 99

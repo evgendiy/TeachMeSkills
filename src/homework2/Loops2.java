@@ -1,4 +1,4 @@
-package HomeWork2;
+package homework2;
 
 /**
  * Вывод от 5 до 1

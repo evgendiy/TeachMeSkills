@@ -1,4 +1,4 @@
-package HomeWork2;
+package homework2;
 
 /**
  * Вывести квадраты чисел от 10 до 20 включительно
