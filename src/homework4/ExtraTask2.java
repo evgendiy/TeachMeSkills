@@ -59,7 +59,6 @@ public class ExtraTask2 {
         int[][] resultArray = new int[array1.length][array2[0].length];
         for (int i = 0; i < resultArray.length; i++) {
             for (int j = 0; j < resultArray[i].length; j++) {
-                resultArray[i][j] = 0;
                 for (int k = 0; k < array1[i].length; k++) {
                     resultArray[i][j] += array1[i][k] * array2[k][j];
                 }
