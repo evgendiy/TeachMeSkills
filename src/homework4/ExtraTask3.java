@@ -24,7 +24,6 @@ public class ExtraTask3 {
         int columns = Integer.parseInt(reader.readLine());
         reader.close();
         int[][] array = new int[rows][columns];
-        reader.close();
         fillingArray(array);
         return array;
     }
