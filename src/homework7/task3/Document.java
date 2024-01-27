@@ -4,12 +4,12 @@ import java.util.Date;
 
 public abstract class Document {
     Date dateOfDocuments;
-    int numberOfDocument;
+    String numberOfDocument;
 
     public Document() {
     }
 
-    public Document(Date dateOfDocuments, int numberOfDocument) {
+    public Document(Date dateOfDocuments, String numberOfDocument) {
         this.dateOfDocuments = dateOfDocuments;
         this.numberOfDocument = numberOfDocument;
     }

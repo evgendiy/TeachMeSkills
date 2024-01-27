@@ -6,18 +6,15 @@ public class Register {
     int countOfdoc = 0;
 
     public void saveDocument(Document doc) {
-        if (doc instanceof Document) { //нужна ли такая проверка
+        if (countOfdoc < documentsArray.length) {
             documentsArray[countOfdoc] = doc;
             System.out.println("Document retained");
             countOfdoc++;
-        } else {
-            System.out.println("Wrong document");
         }
-
     }
 
     public void showDocumentInfo(Document doc) {
-       doc.showInfo();
+        doc.showInfo();
     }
 
 }

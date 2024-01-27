@@ -9,7 +9,7 @@ public class GoodsContract extends Document {
     public GoodsContract() {
     }
 
-    public GoodsContract(Date dateOfDocuments, int numberOfDocument, String typeOfGood, int amountOfGood) {
+    public GoodsContract(Date dateOfDocuments, String numberOfDocument, String typeOfGood, int amountOfGood) {
         super(dateOfDocuments, numberOfDocument);
         this.typeOfGood = typeOfGood;
         this.amountOfGood = amountOfGood;

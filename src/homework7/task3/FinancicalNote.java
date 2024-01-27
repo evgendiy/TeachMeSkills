@@ -10,7 +10,7 @@ public class FinancicalNote extends Document {
     public FinancicalNote(Date date) {
     }
 
-    public FinancicalNote(Date dateOfDocuments, int numberOfDocument, int departmentId, double totalAmount) {
+    public FinancicalNote(Date dateOfDocuments, String numberOfDocument, int departmentId, double totalAmount) {
         super(dateOfDocuments, numberOfDocument);
         this.departmentId = departmentId;
         this.totalAmount = totalAmount;
