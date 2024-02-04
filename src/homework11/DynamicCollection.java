@@ -10,10 +10,12 @@ public class DynamicCollection<T> {
 
     public DynamicCollection() {
         array = new Object[10]; //пусть по умолчанию создает на 10 элементов
+        capacity = 10;
     }
 
     public DynamicCollection(int capacity) {
         if (capacity >= 0) {
+            this.capacity = capacity;
             array = new Object[capacity];
         } else {
             throw new IllegalArgumentException("Wrong capacity");
@@ -35,18 +37,21 @@ public class DynamicCollection<T> {
     }
 
     public void addElement(T element) {
-        if (size == capacity) {
-            automaticIncrease();
+        if (element != null) {
+            if (size == capacity) {
+                automaticIncrease();
+            }
+            array[size] = element;
+            size++;
         }
-        array[size] = element;
-        size++;
     }
 
-    public T getElement(int index) {    //тип возвращаемого заменил с Object на Т, тк в методе add T в параметре
+    @SuppressWarnings("unchecked")
+    public T getElement(int index) {
         if (index < 0 || index >= size) {
             throw new IndexOutOfBoundsException("Index out of array bounds");
         }
-        return (T) array[index];        //не понимаю почему подсвечивает (T) array[index]
+        return (T) array[index];
     }
 
     public void removeElement(int index) { //удаление по индексу элемента
@@ -56,6 +61,7 @@ public class DynamicCollection<T> {
         for (int i = index; i < size - 1; i++) {
             array[i] = array[i + 1];
         }
+        array[size - 1] = null;
         size--;
     }
 
@@ -66,9 +72,9 @@ public class DynamicCollection<T> {
         size = 0;
     }
 
-    public boolean checkElement(Object element) {
+    public boolean checkElement(T element) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i].equals(element)) {
+            if (array[i] != null && array[i].equals(element)) {
                 return true;
             }
         }
