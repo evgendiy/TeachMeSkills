@@ -1,20 +1,18 @@
 package homework7.task1;
 
-public class Square extends Figure {
-    double side;
-
+public class Square extends Rectangle {
     public Square(double side) {
-        this.side = side;
+        super(side, side);
     }
 
     @Override
     double perimeter() {
-        return side * 4;
+        return super.perimeter();
     }
 
     @Override
     double area() {
-        return Math.pow(side, 2);
+        return super.area();
     }
 
 }
