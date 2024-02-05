@@ -52,7 +52,5 @@ public class Task4 implements Passports {
 
         System.out.println(clientData.keySet());
         System.out.println(clientData.values());
-
-
     }
 }

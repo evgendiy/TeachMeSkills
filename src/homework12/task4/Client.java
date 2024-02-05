@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- Задача 4
- Создать класс для описания клиента.
- Поместить в класс поля для описания клиента (дата регистрации(LocalDate), имя, возраст и другие поля по усмотрению).
- Класс клиента должен содержать поле-коллекцию с заказами этого клиента - это, своего рода, корзина заказов клиента.
+ * Задача 4
+ * Создать класс для описания клиента.
+ * Поместить в класс поля для описания клиента (дата регистрации(LocalDate), имя, возраст и другие поля по усмотрению).
+ * Класс клиента должен содержать поле-коллекцию с заказами этого клиента - это, своего рода, корзина заказов клиента.
  */
 public class Client {
     private LocalDate registrationDate;
     private String name;
     private int age;
-    private List <Order> orders;
+    private List<Order> orders;
 
     public Client(LocalDate registrationDate, String name, int age, List<Order> orders) {
         this.registrationDate = registrationDate;
@@ -39,7 +39,7 @@ public class Client {
     }
 
     public void setName(String name) {
-        if (!(name==null) && !name.isEmpty()){
+        if (!(name == null) && !name.isEmpty()) {
             this.name = name;
         }
     }
@@ -49,7 +49,7 @@ public class Client {
     }
 
     public void setAge(int age) {
-        if(age>16 && age<200){  //с перспективой на будущее
+        if (age > 16 && age < 200) {  //с перспективой на будущее
             this.age = age;
         }
     }
